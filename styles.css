@@ -149,12 +149,12 @@ main {
 
 .shopfront {
   display: grid;
-  grid-template-columns: minmax(260px, 0.95fr) minmax(220px, 0.65fr) minmax(280px, 0.9fr);
-  gap: 28px;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(420px, 1fr);
+  gap: 38px;
   width: min(var(--content), calc(100% - 36px));
   margin: 0 auto;
   padding: 54px 0 42px;
-  align-items: stretch;
+  align-items: center;
 }
 
 .shopfront-copy {
@@ -266,52 +266,43 @@ h3 {
 }
 
 .owner-feature {
-  position: relative;
+  display: grid;
+  grid-template-columns: minmax(210px, 0.82fr) minmax(240px, 0.78fr);
   min-height: 520px;
   margin: 0;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  background: var(--cream);
+  background: #fff;
 }
 
 .owner-feature img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 34%;
 }
 
 .owner-feature figcaption {
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
-  padding: 14px;
-  border-radius: var(--radius);
-  background: rgba(255, 248, 242, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px;
+  background: var(--cream);
   color: var(--navy-soft);
-  line-height: 1.45;
+  line-height: 1.55;
 }
 
 .owner-feature strong {
   display: block;
   color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  line-height: 1.08;
 }
 
-.quick-picks {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
-}
-
-.section-kicker {
-  margin-bottom: 18px;
-}
-
-.quick-grid {
-  display: grid;
-  gap: 14px;
+.owner-feature figcaption p:not(.eyebrow) {
+  margin: 14px 0 0;
 }
 
 .shop-section,
@@ -812,21 +803,20 @@ h3 {
 
 @media (max-width: 1020px) {
   .shopfront {
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.7fr);
+    grid-template-columns: 1fr;
   }
 
-  .quick-picks {
-    grid-column: 1 / -1;
-    display: block;
+  .shopfront-copy {
+    min-height: auto;
   }
 
-  .quick-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .shopfront-copy,
   .owner-feature {
-    min-height: 460px;
+    grid-template-columns: minmax(240px, 0.8fr) minmax(280px, 0.9fr);
+    min-height: 430px;
+  }
+
+  .owner-feature figcaption {
+    padding: 20px;
   }
 
   .product-grid {
@@ -874,19 +864,12 @@ h3 {
   }
 
   .owner-feature {
-    height: 410px;
+    grid-template-columns: 1fr;
+    height: auto;
   }
 
-  .quick-grid {
-    display: flex;
-    overflow-x: auto;
-    padding-bottom: 8px;
-    scroll-snap-type: x mandatory;
-  }
-
-  .quick-grid .product-card {
-    flex: 0 0 86%;
-    scroll-snap-align: start;
+  .owner-feature img {
+    height: 360px;
   }
 
   .shop-toolbar {
@@ -940,6 +923,10 @@ h3 {
 
   .cart-drawer {
     padding: 18px;
+  }
+
+  .owner-feature img {
+    height: 320px;
   }
 }
 

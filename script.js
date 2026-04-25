@@ -25,7 +25,6 @@ const state = {
 };
 
 const productGrid = document.querySelector("[data-products]");
-const featuredProducts = document.querySelector("[data-featured-products]");
 const filterContainer = document.querySelector("[data-filters]");
 const searchInput = document.querySelector("[data-search]");
 const resultCount = document.querySelector("[data-result-count]");
@@ -222,13 +221,6 @@ function renderCatalog() {
     visibleProducts.length === 1
       ? "1 set matches your mood."
       : `${visibleProducts.length} sets match your mood.`;
-}
-
-function renderFeatured() {
-  featuredProducts.innerHTML = products
-    .slice(0, 3)
-    .map((product) => renderProductCard(product, true))
-    .join("");
 }
 
 function cartQuantity() {
@@ -433,6 +425,5 @@ document.addEventListener("keydown", (event) => {
 });
 
 renderFilters();
-renderFeatured();
 renderCatalog();
 renderCart();
