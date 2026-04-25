@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>omo.stunning | Handmade Press-On Nails by Anna Pham</title>
+    <meta
+      name="description"
+      content="Shop handmade press-on nail art by Anna Pham. Browse soft, sparkly, navy, and 3D charm sets from omo.stunning."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="omo.stunning home">
+        <span class="brand-mark">os</span>
+        <span>omo.stunning</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#shop">Shop</a>
+        <a href="#fit">Fit guide</a>
+        <a href="#anna">Anna</a>
+        <button class="bag-button" type="button" data-open-cart>
+          Bag
+          <span class="bag-count" data-cart-count>0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="shopfront" aria-labelledby="site-title">
+        <div class="shopfront-copy">
+          <p class="eyebrow">Handmade press-ons by Anna Pham</p>
+          <h1 id="site-title">omo.stunning</h1>
+          <p class="lead">
+            Friendly, heart-warming nail art for the days you want your hands to feel
+            a little more like you.
+          </p>
+          <div class="shopfront-actions">
+            <a class="primary-link" href="#shop">Shop nail sets</a>
+            <button class="secondary-link" type="button" data-open-cart>View bag</button>
+          </div>
+          <ul class="trust-list" aria-label="Shop highlights">
+            <li>Made to order</li>
+            <li>Reusable sets</li>
+            <li>Custom sizing notes welcome</li>
+          </ul>
+        </div>
+
+        <figure class="owner-feature" id="anna">
+          <img
+            src="assets/anna-pham.jpg"
+            alt="Anna Pham smiling warmly"
+            width="900"
+            height="1600"
+          >
+          <figcaption>
+            <strong>Hi, I am Anna.</strong>
+            I make tiny wearable moods, one press-on set at a time.
+          </figcaption>
+        </figure>
+
+        <section class="quick-picks" aria-labelledby="quick-picks-title">
+          <div class="section-kicker">
+            <p class="eyebrow">Quick picks</p>
+            <h2 id="quick-picks-title">Ready to fall for one?</h2>
+          </div>
+          <div class="quick-grid" data-featured-products></div>
+        </section>
+      </section>
+
+      <section class="shop-section" id="shop" aria-labelledby="shop-title">
+        <div class="section-heading">
+          <p class="eyebrow">The collection</p>
+          <h2 id="shop-title">Scan by mood, pick your fit, add to bag.</h2>
+          <p>
+            Each set includes 10 handmade nails. Add a note at checkout for sizing,
+            shape, color tweaks, or a custom recreation.
+          </p>
+        </div>
+
+        <div class="shop-toolbar" aria-label="Shop filters">
+          <label class="search-field">
+            <span>Search</span>
+            <input
+              type="search"
+              placeholder="Try navy, pearl, soft, charm..."
+              autocomplete="off"
+              data-search
+            >
+          </label>
+
+          <div class="filter-tabs" role="tablist" aria-label="Filter nail sets" data-filters></div>
+        </div>
+
+        <p class="result-count" data-result-count aria-live="polite"></p>
+        <div class="product-grid" data-products></div>
+      </section>
+
+      <section class="fit-section" id="fit" aria-labelledby="fit-title">
+        <div class="section-heading">
+          <p class="eyebrow">Fit guide</p>
+          <h2 id="fit-title">A calm little ordering flow.</h2>
+        </div>
+
+        <div class="fit-grid">
+          <article class="fit-step">
+            <span>1</span>
+            <h3>Pick your set</h3>
+            <p>Filter by mood or search for the finish you love most.</p>
+          </article>
+          <article class="fit-step">
+            <span>2</span>
+            <h3>Choose sizing</h3>
+            <p>Select a standard size or choose custom and send nail measurements.</p>
+          </article>
+          <article class="fit-step">
+            <span>3</span>
+            <h3>Send the order</h3>
+            <p>Your bag becomes a tidy order request Anna can confirm personally.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="note-band" aria-label="Custom orders">
+        <div>
+          <p class="eyebrow">Custom friendly</p>
+          <h2>Seen something close, but not exact?</h2>
+        </div>
+        <p>
+          Add a note for a color shift, shorter length, softer sparkle, extra charms,
+          or a set inspired by your outfit. The shop keeps the order simple, then Anna
+          can make it personal.
+        </p>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-labelledby="cart-title">
+      <div class="drawer-header">
+        <div>
+          <p class="eyebrow">Your bag</p>
+          <h2 id="cart-title">Almost yours</h2>
+        </div>
+        <button class="icon-button" type="button" data-close-cart aria-label="Close bag">x</button>
+      </div>
+
+      <div class="cart-items" data-cart-items></div>
+
+      <div class="cart-summary">
+        <div>
+          <span>Subtotal</span>
+          <strong data-subtotal>$0</strong>
+        </div>
+        <p>Shipping and final custom pricing are confirmed before payment.</p>
+      </div>
+
+      <form class="checkout-form" data-checkout-form>
+        <label>
+          Name
+          <input name="name" autocomplete="name" required>
+        </label>
+        <label>
+          Email or Instagram
+          <input name="contact" autocomplete="email" required>
+        </label>
+        <label>
+          Order notes
+          <textarea
+            name="notes"
+            rows="4"
+            placeholder="Sizing, length, shape, delivery city, or custom changes"
+          ></textarea>
+        </label>
+        <div class="checkout-actions">
+          <button class="primary-button" type="submit">Send order request</button>
+          <button class="text-button" type="button" data-copy-order>Copy order</button>
+        </div>
+        <p class="form-status" data-form-status aria-live="polite"></p>
+      </form>
+    </aside>
+
+    <button class="floating-bag" type="button" data-open-cart aria-label="Open bag">
+      Bag
+      <span data-cart-count>0</span>
+    </button>
+    <div class="drawer-overlay" data-drawer-overlay hidden></div>
+
+    <footer class="site-footer">
+      <p>omo.stunning by Anna Pham</p>
+      <a href="#shop">Back to shop</a>
+    </footer>
+
+    <script src="catalog.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

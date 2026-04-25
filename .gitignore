@@ -1,0 +1,5 @@
+.DS_Store
+
+# Keep original source photos local. The site uses optimized, metadata-stripped copies in assets/.
+/*.jpg
+/*.jpeg
