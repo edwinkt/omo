@@ -149,8 +149,8 @@ main {
 
 .shopfront {
   display: grid;
-  grid-template-columns: minmax(280px, 0.85fr) minmax(420px, 1fr);
-  gap: 38px;
+  grid-template-columns: minmax(300px, 0.95fr) minmax(260px, 0.7fr) minmax(300px, 0.8fr);
+  gap: 34px;
   width: min(var(--content), calc(100% - 36px));
   margin: 0 auto;
   padding: 54px 0 42px;
@@ -266,8 +266,6 @@ h3 {
 }
 
 .owner-feature {
-  display: grid;
-  grid-template-columns: minmax(210px, 0.82fr) minmax(240px, 0.78fr);
   min-height: 520px;
   margin: 0;
   border-radius: var(--radius);
@@ -283,25 +281,25 @@ h3 {
   object-position: center 34%;
 }
 
-.owner-feature figcaption {
+.maker-intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 28px;
+  min-height: 520px;
+  padding: 34px;
+  border-radius: var(--radius);
   background: var(--cream);
   color: var(--navy-soft);
   line-height: 1.55;
 }
 
-.owner-feature strong {
-  display: block;
-  color: var(--navy);
+.maker-intro h2 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2rem;
   line-height: 1.08;
 }
 
-.owner-feature figcaption p:not(.eyebrow) {
+.maker-intro p:not(.eyebrow) {
   margin: 14px 0 0;
 }
 
@@ -803,19 +801,20 @@ h3 {
 
 @media (max-width: 1020px) {
   .shopfront {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
   }
 
   .shopfront-copy {
+    grid-column: 1 / -1;
     min-height: auto;
   }
 
-  .owner-feature {
-    grid-template-columns: minmax(240px, 0.8fr) minmax(280px, 0.9fr);
+  .owner-feature,
+  .maker-intro {
     min-height: 430px;
   }
 
-  .owner-feature figcaption {
+  .maker-intro {
     padding: 20px;
   }
 
@@ -847,7 +846,8 @@ h3 {
   }
 
   .shopfront-copy,
-  .owner-feature {
+  .owner-feature,
+  .maker-intro {
     min-height: auto;
   }
 
@@ -863,13 +863,12 @@ h3 {
     font-size: 1rem;
   }
 
-  .owner-feature {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-
   .owner-feature img {
     height: 360px;
+  }
+
+  .maker-intro {
+    padding: 24px;
   }
 
   .shop-toolbar {
